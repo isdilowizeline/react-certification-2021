@@ -1,4 +1,4 @@
-import {createGlobalStyle} from 'styled-components'
+import {createGlobalStyle} from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
   html, body {
@@ -60,4 +60,4 @@ export const GlobalStyles = createGlobalStyle`
     height:50px;
     background: ${({theme}) => theme.primaryDark};
 }
-`
+`;

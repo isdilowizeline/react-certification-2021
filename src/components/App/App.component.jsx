@@ -1,6 +1,7 @@
 import React, {useLayoutEffect} from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
+import {ThemeProvider} from 'styled-components';
 import AuthProvider from '../../providers/Auth';
 import HomePage from '../../pages/Home';
 import LoginPage from '../../pages/Login';
@@ -12,56 +13,54 @@ import Layout from '../Layout';
 import Header from '../Header';
 import {random} from '../../utils/fns';
 import {GlobalStyles} from '../../global';
-import {ThemeProvider} from 'styled-components';
 import {theme} from '../../theme';
 
 function App() {
-    useLayoutEffect(() => {
-        const {body} = document;
+  useLayoutEffect(() => {
+    const {body} = document;
 
-        function rotateBackground() {
-            const xPercent = random(100);
-            const yPercent = random(100);
-            body.style.setProperty('--bg-position', `${xPercent}% ${yPercent}%`);
-        }
+    function rotateBackground() {
+      const xPercent = random(100);
+      const yPercent = random(100);
+      body.style.setProperty('--bg-position', `${xPercent}% ${yPercent}%`);
+    }
 
-        const intervalId = setInterval(rotateBackground, 3000);
-        body.addEventListener('click', rotateBackground);
+    const intervalId = setInterval(rotateBackground, 3000);
+    body.addEventListener('click', rotateBackground);
 
-        return () => {
-            clearInterval(intervalId);
-            body.removeEventListener('click', rotateBackground);
-        };
-    }, []);
+    return () => {
+      clearInterval(intervalId);
+      body.removeEventListener('click', rotateBackground);
+    };
+  }, []);
 
-    return (
-        <ThemeProvider theme={theme}>
-            <BrowserRouter>
-                <AuthProvider>
-                    <GlobalStyles/>
-                    <Header/>
-                    <Layout>
-                        <Switch>
-                            <Route exact path="/">
-                                <HomePage/>
-                            </Route>
-                            <Route exact path="/login">
-                                <LoginPage/>
-                            </Route>
-                            <Private exact path="/secret">
-                                <SecretPage/>
-                            </Private>
-                            <Route path="*">
-                                <NotFound/>
-                            </Route>
-                        </Switch>
-                        <Fortune/>
-                    </Layout>
-                </AuthProvider>
-            </BrowserRouter>
-        </ThemeProvider>
-
-    );
+  return (
+      <ThemeProvider theme={theme}>
+        <BrowserRouter>
+          <AuthProvider>
+            <GlobalStyles/>
+            <Header/>
+            <Layout>
+              <Switch>
+                <Route exact path="/">
+                  <HomePage/>
+                </Route>
+                <Route exact path="/login">
+                  <LoginPage/>
+                </Route>
+                <Private exact path="/secret">
+                  <SecretPage/>
+                </Private>
+                <Route path="*">
+                  <NotFound/>
+                </Route>
+              </Switch>
+              <Fortune/>
+            </Layout>
+          </AuthProvider>
+        </BrowserRouter>
+      </ThemeProvider>
+  );
 }
 
 export default App;
