@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const VideoCard = styled.div`
-font-size:1rem;
 color:#000;
 margin 25px;
 `;
@@ -18,12 +17,24 @@ const Image = styled.img`
 const Title = styled.div`
   font-size: 1rem;
   text-transform: uppercase;
+  @media screen and (max-width: 425px) {
+    font-size: .0005rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
 `;
 const Description = styled.div`
-  font-size: 10px;
+  font-size: .5rem;
+  @media screen and (max-width: 425px) {
+    display:none;
+  }
 `;
 const Small = styled.small`
-  font-size: 10px;
+  font-size: .05rem;
+  @media screen and (max-width: 425px) {
+    display:none;
+  }
 `;
 
 const Styled = {VideoCard, Title, Anchor, Image, Small, Description};
