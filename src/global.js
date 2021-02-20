@@ -57,7 +57,10 @@ export const GlobalStyles = createGlobalStyle`
   
 .header {
     color: #fff;
-    height:50px;
+    height:70px;
     background: ${({theme}) => theme.primaryDark};
+}
+.headerRow {
+padding-top:10px;
 }
 `;

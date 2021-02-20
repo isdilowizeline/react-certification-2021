@@ -14,20 +14,20 @@ function Header() {
   return (
       <>
         <Container fluid className="header">
-          <Row>
+          <Row className="headerRow">
             <Col xs="2">
               <div ref={node}>
                 <Burger open={open} setOpen={setOpen}/>
                 <Menu open={open} setOpen={setOpen}/>
               </div>
             </Col>
-            <Col xs="2">
+            <Col xs="4">
               <Search/>
             </Col>
-            <Col xs={{size: 3, offset: 4}}>
+            <Col xs="4">
               <DarkMode/>
             </Col>
-            <Col xs={{size: 1}}>
+            <Col xs="2">
               <LoginButton/>
             </Col>
           </Row>
