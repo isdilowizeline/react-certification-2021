@@ -9,7 +9,7 @@ const VideoList = (itemsObject) => {
     const videoItems = getVideoItems(items);
     const rowUnit = 12 / 3;
     const videoCards = videoItems.map(({etag, id, snippet}) => (
-        <Col xs={12} sm={rowUnit}>
+        <Col key={etag} xs={12} sm={rowUnit}>
             <VideoCard
                 key={etag}
                 videoUrl={`https://www.youtube.com/watch?v=${id.videoId}`}
