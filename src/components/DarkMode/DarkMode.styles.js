@@ -1,3 +1,3 @@
 import styled from 'styled-components';
 
-export const StyledDarkMode = styled.button``;
+export const StyledDarkMode = styled.div``;
