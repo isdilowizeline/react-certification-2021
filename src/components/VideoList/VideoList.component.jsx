@@ -1,11 +1,11 @@
 import React from 'react';
+import {Container, Row} from 'reactstrap';
 import {StyledVideoList} from './VideoList.styles';
-import {Container, Row} from "reactstrap";
-import VideoCard from '../VideoCard'
-import {getVideoItems} from "../../utils/videoItems";
+import VideoCard from '../VideoCard';
+import {getVideoItems} from '../../utils/videoItems';
 
-const VideoList = (items) => {
-    items = items.items;
+const VideoList = (itemsObject) => {
+    const {items} = itemsObject;
     const videoItems = getVideoItems(items);
 
     return (

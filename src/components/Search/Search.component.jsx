@@ -5,14 +5,14 @@ import {StyledSearch} from './Search.styles';
 const Search = () => {
   return (
       <StyledSearch>
-        <InputGroup>
-          <InputGroupAddon addonType="prepend">
-            <InputGroupText>
-              <i className="bi  bi-search"/>
-            </InputGroupText>
-          </InputGroupAddon>
-          <Input placeholder="Search"/>
-        </InputGroup>
+          <InputGroup>
+              <InputGroupAddon addonType="prepend">
+                  <InputGroupText>
+                      <i className="bi  bi-search"/>
+                  </InputGroupText>
+              </InputGroupAddon>
+              <Input placeholder="Search"/>
+          </InputGroup>
       </StyledSearch>
   );
 };

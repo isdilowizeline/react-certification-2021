@@ -6,9 +6,7 @@ import VideoList from '../../components/VideoList';
 const {items} = mockedData;
 
 function HomePage() {
-  return (
-      <VideoList items={items}/>
-  );
+  return <VideoList items={items}/>;
 }
 
 export default HomePage;
