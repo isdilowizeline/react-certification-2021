@@ -12,7 +12,7 @@ describe('Test for App Component', () => {
     expect(getAllByRole('button').length).toBe(2);
   });
   test('Review that component contains link from videos', () => {
-    // Gets one of the selectors by destructuring the return value
+
     const { getAllByRole } = render(<App />);
     expect(getAllByRole('link').length).toBe(25);
     expect(getAllByRole('textbox').length).toBe(1);
