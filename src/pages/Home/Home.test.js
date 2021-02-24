@@ -2,7 +2,7 @@ import React from 'react';
 import {render, screen} from '@testing-library/react';
 import {BrowserRouter} from 'react-router-dom';
 import AuthProvider from '../../providers/Auth';
-import Home from '../Home/index';
+import Home from './index';
 
 describe('Home Components', () => {
     it('should take a snapshot', () => {

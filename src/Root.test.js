@@ -1,7 +1,7 @@
 import React from 'react';
 import {render} from '@testing-library/react';
+import {ThemeProvider} from 'styled-components';
 import {GlobalStyles} from './global';
-import {ThemeProvider} from "styled-components";
 import {theme} from './theme';
 
 describe('Root File Test', () => {

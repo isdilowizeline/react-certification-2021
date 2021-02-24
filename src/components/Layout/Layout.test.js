@@ -1,7 +1,7 @@
 import React from 'react';
 import {render} from '@testing-library/react';
 import AuthProvider from '../../providers/Auth';
-import Layout from '../Layout';
+import Layout from '.';
 
 describe('Layout Components', () => {
     it('should take a snapshot', () => {

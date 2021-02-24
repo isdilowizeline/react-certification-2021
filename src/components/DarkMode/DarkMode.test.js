@@ -14,6 +14,4 @@ describe('Test for Dark Mode Component', () => {
         const {getByRole} = render(<DarkMode/>);
         expect(getByRole('checkbox').type).toBe('checkbox');
     });
-
-
 });

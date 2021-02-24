@@ -9,9 +9,7 @@ describe('Test for Header Component', () => {
         expect(getByText('Dark Mode').tagName).toBe('LABEL');
     });
     test('Expect the string Dark Mode', () => {
-        render(
-            <Header/>
-        );
+        render(<Header/>);
         expect(screen.getByText('Dark Mode')).toBeTruthy();
     });
     test('Review that component returns what is expected', () => {
