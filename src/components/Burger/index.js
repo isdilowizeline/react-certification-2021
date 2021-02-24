@@ -1,1 +1,1 @@
-export {default} from './Burger.component';
+export { default } from './Burger.component';

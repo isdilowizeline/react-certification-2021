@@ -1,7 +1,7 @@
 import React from 'react';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import {ThemeProvider} from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 import AuthProvider from '../../providers/Auth';
 import HomePage from '../../pages/Home';
 import LoginPage from '../../pages/Login';
@@ -10,35 +10,35 @@ import SecretPage from '../../pages/Secret';
 import Private from '../Private';
 import Layout from '../Layout';
 import Header from '../Header';
-import {GlobalStyles} from '../../global';
-import {theme} from '../../theme';
+import { GlobalStyles } from '../../global';
+import { theme } from '../../theme';
 
 function App() {
   return (
-      <ThemeProvider theme={theme}>
-        <BrowserRouter>
-          <AuthProvider>
-            <GlobalStyles/>
-            <Header/>
-            <Layout>
-              <Switch>
-                <Route exact path="/">
-                  <HomePage/>
-                </Route>
-                <Route exact path="/login">
-                  <LoginPage/>
-                </Route>
-                <Private exact path="/secret">
-                  <SecretPage/>
-                </Private>
-                <Route path="*">
-                  <NotFound/>
-                </Route>
-              </Switch>
-            </Layout>
-          </AuthProvider>
-        </BrowserRouter>
-      </ThemeProvider>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <AuthProvider>
+          <GlobalStyles />
+          <Header />
+          <Layout>
+            <Switch>
+              <Route exact path="/">
+                <HomePage />
+              </Route>
+              <Route exact path="/login">
+                <LoginPage />
+              </Route>
+              <Private exact path="/secret">
+                <SecretPage />
+              </Private>
+              <Route path="*">
+                <NotFound />
+              </Route>
+            </Switch>
+          </Layout>
+        </AuthProvider>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

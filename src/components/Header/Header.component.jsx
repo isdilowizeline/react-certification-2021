@@ -1,38 +1,38 @@
-import React, {useRef, useState} from 'react';
-import {Col, Container, Row} from 'reactstrap';
+import React, { useRef, useState } from 'react';
+import { Col, Container, Row } from 'reactstrap';
 import Burger from '../Burger';
 import DarkMode from '../DarkMode';
 import LoginButton from '../LoginButton';
 import Search from '../Search';
 import Menu from '../Menu';
-import {useOnClickOutside} from '../../utils/hooks/clickOutside';
+import { useOnClickOutside } from '../../utils/hooks/clickOutside';
 
 function Header() {
   const [open, setOpen] = useState(false);
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
   return (
-      <>
-        <Container fluid className="header">
-          <Row className="headerRow">
-            <Col xs="2">
-              <div ref={node}>
-                <Burger open={open} setOpen={setOpen}/>
-                <Menu open={open} setOpen={setOpen}/>
-              </div>
-            </Col>
-            <Col xs="4">
-              <Search/>
-            </Col>
-            <Col xs="4">
-              <DarkMode/>
-            </Col>
-            <Col xs="2">
-              <LoginButton/>
-            </Col>
-          </Row>
-        </Container>
-      </>
+    <>
+      <Container fluid className="header">
+        <Row className="headerRow">
+          <Col xs="2">
+            <div ref={node}>
+              <Burger open={open} setOpen={setOpen} />
+              <Menu open={open} setOpen={setOpen} />
+            </div>
+          </Col>
+          <Col xs="4">
+            <Search />
+          </Col>
+          <Col xs="4">
+            <DarkMode />
+          </Col>
+          <Col xs="2">
+            <LoginButton />
+          </Col>
+        </Row>
+      </Container>
+    </>
   );
 }
 

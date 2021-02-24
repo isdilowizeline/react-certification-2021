@@ -37,5 +37,5 @@ const Small = styled.small`
   }
 `;
 
-const Styled = {VideoCard, Title, Anchor, Image, Small, Description};
+const Styled = { VideoCard, Title, Anchor, Image, Small, Description };
 export default Styled;

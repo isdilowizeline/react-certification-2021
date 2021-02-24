@@ -1,4 +1,4 @@
-import {createGlobalStyle} from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
   html, body {
@@ -16,8 +16,8 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: inherit;
   }
   body {
-    background: ${({theme}) => theme.primaryBackground};
-    color: ${({theme}) => theme.primaryHover};
+    background: ${({ theme }) => theme.primaryBackground};
+    color: ${({ theme }) => theme.primaryHover};
     text-rendering: optimizeLegibility;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     text-rendering: optimizeLegibility;
@@ -46,7 +46,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   
   a {
-    color: ${({theme}) => theme.primaryHover};
+    color: ${({ theme }) => theme.primaryHover};
     font-weight: bold;
     text-decoration: none;
   }
@@ -58,7 +58,7 @@ export const GlobalStyles = createGlobalStyle`
 .header {
     color: #fff;
     height:70px;
-    background: ${({theme}) => theme.primaryDark};
+    background: ${({ theme }) => theme.primaryDark};
 }
 .headerRow {
 padding-top:10px;

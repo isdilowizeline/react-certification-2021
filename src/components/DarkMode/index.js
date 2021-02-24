@@ -1,1 +1,1 @@
-export {default} from './DarkMode.component';
+export { default } from './DarkMode.component';
